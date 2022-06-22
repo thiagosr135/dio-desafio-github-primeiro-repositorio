@@ -1,10 +1,8 @@
-[TOC]
-
-# Introdução ao GIT e ao GitHub
+# Introdução ao Git e ao GitHub
 
 O foco do curso é adquirir conhecimentos sobre a ferramenta Git Bash, devemos primeiro conhecer alguns comandos básicos para familiarização com terminal seja no sistema operacional Windows (shell) ou Linux (bash).
 
-|    SHELL    |                          Descrição                           |    BASH     |
+|    SHELL    |                          DESCRIÇÃO                           |    BASH     |
 | :---------: | :----------------------------------------------------------: | :---------: |
 |     dir     | Lista os diretórios dentro da pasta em que se está situado no terminal |     ls      |
 |    cd /     | Acessar uma pasta que será informada através da barra ("/")  |    cd /     |
@@ -24,17 +22,15 @@ O foco do curso é adquirir conhecimentos sobre a ferramenta Git Bash, devemos p
 - Melhorar seu código
 - Reconhecimento
 
-### Download e Instalação do GIT
+### Download do Git
 
-[Link para download na página oficial](https://git-scm.com/downloads)
+[Link para download na página oficial](https://git-scm.com/downloads).
 
 ### Adicionar Chave SSH no GitHub
 
 Para estabelecer uma comunicação segura com encriptação entre duas máquinas, no caso a nossa máquina local e o servidor do GitHub. Devemos acessar as opções em nosso perfil do GitHub, e selecionar [SSH and GPG keys](https://github.com/settings/keys), feito isso acessar o Git Bash.
 
-Agora, para criar o par de chaves SSH, no terminal Git Bash devemos passar o comando informando o tipo de encriptação e o e-mail da conta GitHub:
-
-`ssh-keygen -t ed25519 -C email@exemplo.com`
+Agora, para criar o par de chaves SSH, no terminal Git Bash devemos passar o comando informando o tipo de encriptação e o e-mail da conta GitHub: `ssh-keygen -t ed25519 -C email@exemplo.com`.
 
 Feito isso, serão criadas duas chaves sendo uma privada e outra pública. Podemos usar o comando `cat id_ed25519.pub` para pegar o conteúdo da chave e adicionar em **New SSH Key** na opção [SSH and GPG keys](https://github.com/settings/keys).
 
@@ -55,6 +51,9 @@ Acessamos as configuração em nosso perfil e escolhemos a opção [Developer se
 - Para adicionar todos os arquivos do projeto ao commit: `git add *`.
 - Para criar o commit e descrever o que foi realizado no projeto: `git commit - m "descrição"`.
 
+### Ciclo de Vida dos Arquivos no Git
+![Ciclo de Vida dos Arquivos no Git](https://github.com/thiagosr135/dio-desafio-github-primeiro-repositorio/blob/main/Introducao%20ao%20Git%20e%20ao%20GitHub/Ciclo%20de%20Vida%20dos%20Arquivos%20no%20Git.PNG?raw=true)
+
 ### Trabalhando com o GitHub
 
 - Podemos verificar as configurações do Git e comparar com o GitHub: `git config --list`.
@@ -62,4 +61,5 @@ Acessamos as configuração em nosso perfil e escolhemos a opção [Developer se
 - Para apontar nosso repositório local com o servidor GitHub, devemos informar a origem para onde ele será enviado: `git remote add origin https://link-exemplo.git`.
 - Com o comando `git status` podemos acompanhar o status do nosso projeto no Git.
 - Para enviar nosso repositório local ao GitHub após identificar a origem: `git push origin master`.
+- Buscar alterações/versão mais atualizada do projeto para nosso repositório local: `git pull origin master`.
 - Para clonar um repositório do GitHub para nossa máquina local: `git clone "link https ou chave ssh"`.
